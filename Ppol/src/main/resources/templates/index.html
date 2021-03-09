@@ -1,103 +1,50 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>준우마켓은 무엇을 팔까?</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <link rel="stylesheet" href="./css/style.css"/>
-    <script>
-        $(document).ready(function(){
-          $('.slider > ul').bxSlider({
-              pager: false,
-              easing: 'linear'
-          });
-        });
-    </script>
-</head>
-<body>
-    <div id="wrapper">
-        <header>
-            <div class="top">
-                <div>
-                    <a href="/member/login">로그인</a>
-                    <a href="/member/terms">회원가입</a>
-                    <a href="#">마이페이지</a>
-                    <a href="./shop/cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;장바구니</a>
-                </div>
-            </div>
-            <div class="logo">
-                <div>
-                    <a href="#"><img src="./img/linkedin_banner_image_logo.png" alt="로고"/></a>
-                    <form action="#">
-                        <input type="text" name="search"/>
-                        <button><i class="fa fa-search"></i></button>
-                    </form>                
-                </div>
-                
-            </div>
-            <div class="menu">
-                <div>
-                    <ul>
-                        <li><a href="#">이벤트</a></li>
-                        <li><a href="#">사용후기</a></li>
-                        <li><a href="./User/list.html">커뮤니티</a></li>
-                        <li><a href="#">고객센터</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-            </div>
-        </header>
+<th:block th:include="/_header.html"></th:block>
         <main>
-            
             <aside>
-                <!-- 카테고리 -->
+                <!-- ī�װ��� -->
                 <ul class="category">
-                    <li><i class="fa fa-bars" aria-hidden="true"></i>카테고리</li>
+                    <li><i class="fa fa-bars" aria-hidden="true"></i>ī�װ���</li>
                     <li>
-                        <a href="#"><i class="fas fa-keyboard"></i>키보드</a> 
+                        <a href="#"><i class="fas fa-keyboard"></i>Ű����</a> 
                         <ol>
-                            <li><a href="./shop/list.html">기계식(청축)</a></li>
-                            <li><a href="./shop/noname.html">기계식(적축)</a></li>
-                            <li><a href="./shop/noname.html">기계식(갈축)</a></li>
-                            <li><a href="./shop/noname.html">무선 키보드</a></li>
+                            <li><a href="./shop/list.html">����(û��)</a></li>
+                            <li><a href="./shop/noname.html">����(����)</a></li>
+                            <li><a href="./shop/noname.html">����(����)</a></li>
+                            <li><a href="./shop/noname.html">���� Ű����</a></li>
                         </ol>
                     </li>
                     <li>
-                        <a href="#"><i class="fas fa-mouse"></i>마우스</a>
+                        <a href="#"><i class="fas fa-mouse"></i>���콺</a>
                         <ol>
-                            <li><a href="./shop/noname.html">유선마우스</a></li>
-                            <li><a href="./shop/mouse/mouselist.html">무선마우스</a></li>
+                            <li><a href="./shop/noname.html">�������콺</a></li>
+                            <li><a href="./shop/mouse/mouselist.html">�������콺</a></li>
                         </ol>
                     </li>
                     <li>
-                        <a href="#"><i class="fas fa-headset"></i>헤드셋·이어폰</a>
+                        <a href="#"><i class="fas fa-headset"></i>���¡��̾���</a>
                         <ol>
-                            <li><a href="./shop/noname.html">유선 헤드셋</a></li>
-                            <li><a href="./shop/noname.html">무선 헤드셋</a></li>
-                            <li><a href="./shop/noname.html">이어폰</a></li>
-                            <li><a href="./shop/noname.html">마이크</a></li>
+                            <li><a href="./shop/noname.html">���� ����</a></li>
+                            <li><a href="./shop/noname.html">���� ����</a></li>
+                            <li><a href="./shop/noname.html">�̾���</a></li>
+                            <li><a href="./shop/noname.html">����ũ</a></li>
                         </ol>
                     </li>
                     <li>
-                        <a href="#"><i class="fas fa-wrench"></i>악세사리</a>
+                        <a href="#"><i class="fas fa-wrench"></i>�Ǽ��縮</a>
                         <ol>
-                            <li><a href="./shop/noname.html">키보드</a></li>
-                            <li><a href="./shop/noname.html">마우스</a></li>
-                            <li><a href="./shop/noname.html">헤드셋·이어폰</a></li>
-                            <li><a href="./shop/noname.html">마이크</a></li>
+                            <li><a href="./shop/noname.html">Ű����</a></li>
+                            <li><a href="./shop/noname.html">���콺</a></li>
+                            <li><a href="./shop/noname.html">���¡��̾���</a></li>
+                            <li><a href="./shop/noname.html">����ũ</a></li>
                         </ol>
                     </li>
                 </ul>
 
-                <!-- 베스트상품 -->
+                <!-- ����Ʈ��ǰ -->
                 <article class="best" style="position: static; top: 0px;">
-                    <h1><i class="fas fa-crown" area-hidden="true">"베스트상품"</i></h1>
+                    <h1><i class="fas fa-crown" area-hidden="true">"����Ʈ��ǰ"</i></h1>
                     <ol>
                         <li>
                             <a href="./shop/mouse/mousemouse.html">
@@ -105,7 +52,7 @@
                                     <i>1</i>
                                     <img src="./img/mousemouse.jpg" alt="sample">
                                 </div>
-                                <h2>마우스는 쥐가 맞아</h2>
+                                <h2>���콺�� �㰡 �¾�</h2>
                                 <div class="org_price">
                                     <del>30,000</del>
                                     <span>10%</span>
@@ -119,30 +66,30 @@
                 </article>
             </aside>
             <section>
-                <!-- 슬라이더 영역 -->
+                <!-- �����̴� ���� -->
                 <section class="slider">
                     <ul>
                         <li><a href="#"><img src="./img/slider1.jpg" alt="item1"></a></li>
                         <li><a href="#"><img src="./img/slider2.jpg" alt="item2"></a></li>
                     </ul>
                 </section>
-                <!-- 히트상품 영역 -->
+                <!-- ��Ʈ��ǰ ���� -->
                 <article class="hit">
-                    <h3><span>마우스</span></h3>
+                    <h3><span>���콺</span></h3>
                     <div class="item">
                         <a href="./shop/mouse/mouseviper.html">
                             <div class="thumb">
                                 <img src="./img/front_c4449_gz0jr.jpg" alt="sample">
                             </div>
-                            <h2>판매자도 직접 쓰는 마우스</h2>
-                            <p>헤어나오지 못해</p>
+                            <h2>�Ǹ��ڵ� ���� ���� ���콺</h2>
+                            <p>������ ����</p>
                             <div class="org_price">
                                 <del>30,000</del>
                                 <span>10%</span>
                             </div>
                             <div class="dis_price">
                                 <ins>27,000</ins>
-                                <span>무료배송</span>
+                                <span>������</span>
                             </div>
                         </a>
                     </div>
@@ -151,15 +98,15 @@
                             <div class="thumb">
                                 <img src="./img/front_c4449_gz0jr.jpg" alt="sample">
                             </div>
-                            <h2>판매자도 직접 쓰는 마우스</h2>
-                            <p>헤어나오지 못해</p>
+                            <h2>�Ǹ��ڵ� ���� ���� ���콺</h2>
+                            <p>������ ����</p>
                             <div class="org_price">
                                 <del>30,000</del>
                                 <span>10%</span>
                             </div>
                             <div class="dis_price">
                                 <ins>27,000</ins>
-                                <span>무료배송</span>
+                                <span>������</span>
                             </div>
                         </a>
                     </div>
@@ -168,15 +115,15 @@
                             <div class="thumb">
                                 <img src="./img/front_c4449_gz0jr.jpg" alt="sample">
                             </div>
-                            <h2>판매자도 직접 쓰는 마우스</h2>
-                            <p>헤어나오지 못해</p>
+                            <h2>�Ǹ��ڵ� ���� ���� ���콺</h2>
+                            <p>������ ����</p>
                             <div class="org_price">
                                 <del>30,000</del>
                                 <span>10%</span>
                             </div>
                             <div class="dis_price">
                                 <ins>27,000</ins>
-                                <span>무료배송</span>
+                                <span>������</span>
                             </div>
                         </a>
                     </div>
@@ -185,36 +132,36 @@
                             <div class="thumb">
                                 <img src="./img/front_c4449_gz0jr.jpg" alt="sample">
                             </div>
-                            <h2>판매자도 직접 쓰는 마우스</h2>
-                            <p>헤어나오지 못해</p>
+                            <h2>�Ǹ��ڵ� ���� ���� ���콺</h2>
+                            <p>������ ����</p>
                             <div class="org_price">
                                 <del>30,000</del>
                                 <span>10%</span>
                             </div>
                             <div class="dis_price">
                                 <ins>27,000</ins>
-                                <span>무료배송</span>
+                                <span>������</span>
                             </div>
                         </a>
                     </div>
                 </article>
-                <!-- 추천상품 영역 -->
+                <!-- ��õ��ǰ ���� -->
                 <article class="recommend">
-                    <h3><span>키보드</span></h3>
+                    <h3><span>Ű����</span></h3>
                     <div class="item">
                         <a href="#">
                             <div class="thumb">
                                 <img src="./img/keyboard1_1.jpg" alt="sample">
                             </div>
-                            <h2>피시방키보드피시방키보드피시방키보드피시방키보드피시방키보드</h2>
-                            <p>어디서 봤더라 하면 생각나는 피시방 키보드 어디서 봤더라 하면 생각나는 피시방 키보드</p>
+                            <h2>�ǽù�Ű�����ǽù�Ű�����ǽù�Ű�����ǽù�Ű�����ǽù�Ű����</h2>
+                            <p>��� �ô��� �ϸ� �������� �ǽù� Ű���� ��� �ô��� �ϸ� �������� �ǽù� Ű����</p>
                             <div class="org_price">
                                 <del>30,000</del>
                                 <span>10%</span>
                             </div>
                             <div class="dis_price">
                                 <ins>27,000</ins>
-                                <span>무료배송</span>
+                                <span>������</span>
                             </div>
                         </a>
                     </div>
@@ -223,15 +170,15 @@
                             <div class="thumb">
                                 <img src="./img/keyboard1_1.jpg" alt="sample">
                             </div>
-                            <h2>피시방키보드피시방키보드피시방키보드피시방키보드피시방키보드</h2>
-                            <p>어디서 봤더라 하면 생각나는 피시방 키보드 어디서 봤더라 하면 생각나는 피시방 키보드</p>
+                            <h2>�ǽù�Ű�����ǽù�Ű�����ǽù�Ű�����ǽù�Ű�����ǽù�Ű����</h2>
+                            <p>��� �ô��� �ϸ� �������� �ǽù� Ű���� ��� �ô��� �ϸ� �������� �ǽù� Ű����</p>
                             <div class="org_price">
                                 <del>30,000</del>
                                 <span>10%</span>
                             </div>
                             <div class="dis_price">
                                 <ins>27,000</ins>
-                                <span>무료배송</span>
+                                <span>������</span>
                             </div>
                         </a>
                     </div>
@@ -240,15 +187,15 @@
                             <div class="thumb">
                                 <img src="./img/keyboard1_1.jpg" alt="sample">
                             </div>
-                            <h2>피시방키보드피시방키보드피시방키보드피시방키보드피시방키보드</h2>
-                            <p>어디서 봤더라 하면 생각나는 피시방 키보드 어디서 봤더라 하면 생각나는 피시방 키보드</p>
+                            <h2>�ǽù�Ű�����ǽù�Ű�����ǽù�Ű�����ǽù�Ű�����ǽù�Ű����</h2>
+                            <p>��� �ô��� �ϸ� �������� �ǽù� Ű���� ��� �ô��� �ϸ� �������� �ǽù� Ű����</p>
                             <div class="org_price">
                                 <del>30,000</del>
                                 <span>10%</span>
                             </div>
                             <div class="dis_price">
                                 <ins>27,000</ins>
-                                <span>무료배송</span>
+                                <span>������</span>
                             </div>
                         </a>
                     </div>
@@ -257,36 +204,36 @@
                             <div class="thumb">
                                 <img src="./img/keyboard1_1.jpg" alt="sample">
                             </div>
-                            <h2>피시방키보드피시방키보드피시방키보드피시방키보드피시방키보드</h2>
-                            <p>어디서 봤더라 하면 생각나는 피시방 키보드 어디서 봤더라 하면 생각나는 피시방 키보드</p>
+                            <h2>�ǽù�Ű�����ǽù�Ű�����ǽù�Ű�����ǽù�Ű�����ǽù�Ű����</h2>
+                            <p>��� �ô��� �ϸ� �������� �ǽù� Ű���� ��� �ô��� �ϸ� �������� �ǽù� Ű����</p>
                             <div class="org_price">
                                 <del>30,000</del>
                                 <span>10%</span>
                             </div>
                             <div class="dis_price">
                                 <ins>27,000</ins>
-                                <span>무료배송</span>
+                                <span>������</span>
                             </div>
                         </a>
                     </div>
                 </article>
-                <!-- 최신상품 영역 -->
+                <!-- �ֽŻ�ǰ ���� -->
                 <article class="new">
-                    <h3><span>헤드셋·이어폰</span></h3>
+                    <h3><span>���¡��̾���</span></h3>
                     <div class="item">
                         <a href="./shop/mouse/mousemouse.html">
                             <div class="thumb">
                                 <img src="./img/mousemouse.jpg" alt="sample">
                             </div>
-                            <h2>마우스는 쥐가 맞아!!!마우스는 쥐가 맞아!!!</h2>
-                            <p>귀엽다고 쓰다듬으면 휠누름 귀엽다고 쓰다듬으면 휠누름</p>
+                            <h2>���콺�� �㰡 �¾�!!!���콺�� �㰡 �¾�!!!</h2>
+                            <p>�Ϳ��ٰ� ���ٵ����� �ٴ��� �Ϳ��ٰ� ���ٵ����� �ٴ���</p>
                             <div class="org_price">
                                 <del>30,000</del>
                                 <span>10%</span>
                             </div>
                             <div class="dis_price">
                                 <ins>27,000</ins>
-                                <span>무료배송</span>
+                                <span>������</span>
                             </div>
                         </a>
                     </div>
@@ -295,15 +242,15 @@
                             <div class="thumb">
                                 <img src="./img/mousemouse.jpg" alt="sample">
                             </div>
-                            <h2>마우스는 쥐가 맞아!!!마우스는 쥐가 맞아!!!</h2>
-                            <p>귀엽다고 쓰다듬으면 휠누름 귀엽다고 쓰다듬으면 휠누름</p>
+                            <h2>���콺�� �㰡 �¾�!!!���콺�� �㰡 �¾�!!!</h2>
+                            <p>�Ϳ��ٰ� ���ٵ����� �ٴ��� �Ϳ��ٰ� ���ٵ����� �ٴ���</p>
                             <div class="org_price">
                                 <del>30,000</del>
                                 <span>10%</span>
                             </div>
                             <div class="dis_price">
                                 <ins>27,000</ins>
-                                <span>무료배송</span>
+                                <span>������</span>
                             </div>
                         </a>
                     </div>
@@ -312,15 +259,15 @@
                             <div class="thumb">
                                 <img src="./img/mousemouse.jpg" alt="sample">
                             </div>
-                            <h2>마우스는 쥐가 맞아!!!마우스는 쥐가 맞아!!!</h2>
-                            <p>귀엽다고 쓰다듬으면 휠누름 귀엽다고 쓰다듬으면 휠누름</p>
+                            <h2>���콺�� �㰡 �¾�!!!���콺�� �㰡 �¾�!!!</h2>
+                            <p>�Ϳ��ٰ� ���ٵ����� �ٴ��� �Ϳ��ٰ� ���ٵ����� �ٴ���</p>
                             <div class="org_price">
                                 <del>30,000</del>
                                 <span>10%</span>
                             </div>
                             <div class="dis_price">
                                 <ins>27,000</ins>
-                                <span>무료배송</span>
+                                <span>������</span>
                             </div>
                         </a>
                     </div>
@@ -329,36 +276,36 @@
                             <div class="thumb">
                                 <img src="./img/mousemouse.jpg" alt="sample">
                             </div>
-                            <h2>마우스는 쥐가 맞아!!!마우스는 쥐가 맞아!!!</h2>
-                            <p>귀엽다고 쓰다듬으면 휠누름 귀엽다고 쓰다듬으면 휠누름</p>
+                            <h2>���콺�� �㰡 �¾�!!!���콺�� �㰡 �¾�!!!</h2>
+                            <p>�Ϳ��ٰ� ���ٵ����� �ٴ��� �Ϳ��ٰ� ���ٵ����� �ٴ���</p>
                             <div class="org_price">
                                 <del>30,000</del>
                                 <span>10%</span>
                             </div>
                             <div class="dis_price">
                                 <ins>27,000</ins>
-                                <span>무료배송</span>
+                                <span>������</span>
                             </div>
                         </a>
                     </div>
                 </article>
-                <!-- 할인상품 영역 -->
+                <!-- ���λ�ǰ ���� -->
                 <article class="discount">
-                    <h3><span>악세사리</span></h3>
+                    <h3><span>�Ǽ��縮</span></h3>
                     <div class="item">
                         <a href="./shop/list.html">
                             <div class="thumb">
                                 <img src="./img/unnamed.jpg" alt="sample">
                             </div>
-                            <h2>파란키보드 파란키보드</h2>
-                            <p>판매자는 개인적으로 이거 맘에 안듬 판매자는 개인적으로 이거 맘에 안듬</p>
+                            <h2>�Ķ�Ű���� �Ķ�Ű����</h2>
+                            <p>�Ǹ��ڴ� ���������� �̰� ���� �ȵ� �Ǹ��ڴ� ���������� �̰� ���� �ȵ�</p>
                             <div class="org_price">
                                 <del>30,000</del>
                                 <span>10%</span>
                             </div>
                             <div class="dis_price">
                                 <ins>27,000</ins>
-                                <span>무료배송</span>
+                                <span>������</span>
                             </div>
                         </a>
                     </div>
@@ -367,15 +314,15 @@
                             <div class="thumb">
                                 <img src="./img/unnamed.jpg" alt="sample">
                             </div>
-                            <h2>파란키보드 파란키보드</h2>
-                            <p>판매자는 개인적으로 이거 맘에 안듬 판매자는 개인적으로 이거 맘에 안듬</p>
+                            <h2>�Ķ�Ű���� �Ķ�Ű����</h2>
+                            <p>�Ǹ��ڴ� ���������� �̰� ���� �ȵ� �Ǹ��ڴ� ���������� �̰� ���� �ȵ�</p>
                             <div class="org_price">
                                 <del>30,000</del>
                                 <span>10%</span>
                             </div>
                             <div class="dis_price">
                                 <ins>27,000</ins>
-                                <span>무료배송</span>
+                                <span>������</span>
                             </div>
                         </a>
                     </div>
@@ -384,15 +331,15 @@
                             <div class="thumb">
                                 <img src="./img/unnamed.jpg" alt="sample">
                             </div>
-                            <h2>파란키보드 파란키보드</h2>
-                            <p>판매자는 개인적으로 이거 맘에 안듬 판매자는 개인적으로 이거 맘에 안듬</p>
+                            <h2>�Ķ�Ű���� �Ķ�Ű����</h2>
+                            <p>�Ǹ��ڴ� ���������� �̰� ���� �ȵ� �Ǹ��ڴ� ���������� �̰� ���� �ȵ�</p>
                             <div class="org_price">
                                 <del>30,000</del>
                                 <span>10%</span>
                             </div>
                             <div class="dis_price">
                                 <ins>27,000</ins>
-                                <span>무료배송</span>
+                                <span>������</span>
                             </div>
                         </a>
                     </div>
@@ -401,46 +348,20 @@
                             <div class="thumb">
                                 <img src="./img/unnamed.jpg" alt="sample">
                             </div>
-                            <h2>파란키보드 파란키보드</h2>
-                            <p>판매자는 개인적으로 이거 맘에 안듬 판매자는 개인적으로 이거 맘에 안듬</p>
+                            <h2>�Ķ�Ű���� �Ķ�Ű����</h2>
+                            <p>�Ǹ��ڴ� ���������� �̰� ���� �ȵ� �Ǹ��ڴ� ���������� �̰� ���� �ȵ�</p>
                             <div class="org_price">
                                 <del>30,000</del>
                                 <span>10%</span>
                             </div>
                             <div class="dis_price">
                                 <ins>27,000</ins>
-                                <span>무료배송</span>
+                                <span>������</span>
                             </div>
                         </a>
                     </div>
                 </article>
             </section>
         </main>
-        <footer>
-            <ul>
-                <li><a href="./introduction/hello.html">회사소개</a></li>
-                <li><a href="#">서비스이용약관</a></li>
-                <li><a href="#">개인정보처리방침</a></li>
-                <li><a href="#">전자금융거래약관</a></li>
-            </ul>
-            <div>
-                <p><img src="./img/linkedin_banner_image_logo.png" alt="로고"></p>
-                <p>
-                  <strong>(주)준우마켓</strong><br />
-                  부산시 강남구 테헤란로 152 (역삼동 강남파이낸스센터)<br />
-                  대표이사 : 홍길동<br />
-                  사업자등록번호 : 220-81-83676 사업자정보확인<br />
-                  통신판매업신고 : 강남 10630호 Fax : 02-589-8842
-                </p>
-                <p>
-                  <strong>고객센터</strong><br />
-                  Tel : 1234-5678 (평일 09:00~18:00)<br />
-                  스마일클럽/SVIP 전용 : 1522-5700 (365일 09:00~18:00)<br />
-                  경기도 부천시 원미구 부일로 223(상동) 투나빌딩 6층<br />
-                  Fax : 051-123-4567 | Mail : jw@jw.co.kr<br />
-                </p>
-              </div>              
-        </footer>
-    </div>    
-</body>
+        <th:block th:include="/_footer.html"></th:block>
 </html>

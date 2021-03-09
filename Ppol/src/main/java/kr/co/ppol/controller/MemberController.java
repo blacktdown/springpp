@@ -33,10 +33,10 @@ public class MemberController {
 	@PostMapping("/member/login")
 	public String login(MemberVo vo, HttpSession sess) {
 		
-		MemberVo member = service.selectMember(vo);
+		MemberVo user = service.selectMember(vo);
 		
-		if(member != null) {
-			sess.setAttribute("smember", member);
+		if(user != null) {
+			sess.setAttribute("suser", user);
 			return "redirect:/index";
 		} else {
 			return "redirect:/member/login";

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>준우마켓은 무엇을 팔까?</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="./css/style.css"/>
+    <script>
+        $(function(){
+            $('.slider > ul').bxSlider({
+                slideWidth: 980,
+                pager: false,
+                controls: false,
+                auto: true
+            });
+            $('#tabs').tabs();
+        });
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="top">
+                <div>
+                    <a th:if="${session.user == null}" href="/member/login">로그인</a>
+		        	<a th:if="${session.user == null}" href="/member/terms">회원가입</a>
+		        	<a th:if="${session.user != null}" href="/member/logout">로그아웃</a>
+                    <a href="#">마이페이지</a>
+                    <a href="/shop/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;장바구니</a>
+                </div>
+            </div>
+            <div class="logo">
+                <div>
+                    <a href="/"><img src="./img/linkedin_banner_image_logo.png" alt="로고"/></a>
+                    <form action="#">
+                        <input type="text" name="search"/>
+                        <button><i class="fa fa-search"></i></button>
+                    </form>                
+                </div>
+                
+            </div>
+            <div class="menu">
+                <div>
+                    <ul>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">사용후기</a></li>
+                        <li><a href="./User/list.html">커뮤니티</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+</html>
