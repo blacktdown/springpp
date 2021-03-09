@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.ppol.dao.MemberDao">
+
+	<insert id="insertMember">
+		INSERT INTO `JBOARD_MEMBER` SET
+		`uid`=#{uid}, 
+		`pass`=PASSWORD(#{pass1}), 
+		`name`=#{name}, 
+		`nick`=#{nick}, 
+		`email`=#{email}, 
+		`hp`=#{hp}, 
+		`zip`=#{zip}, 
+		`addr1`=#{addr1}, 
+		`addr2`=#{addr2}, 
+		`regip`=#{regip},
+		`rdate`=NOW();		  
+	</insert>
+	
+	<select id="selectTerms" resultType="kr.co.ppol.vo.TermsVo">
+		SELECT * FROM `JBOARD_TERMS`;
+	</select>
+	
+	<select id="selectMember" resultType="kr.co.ppol.vo.MemberVo">
+		SELECT * FROM `JBOARD_MEMBER` WHERE `uid`=#{uid} AND `pass`=PASSWORD(#{pass});
+	</select>
+		
+	<select id="selectMembers" resultType="kr.co.ppol.vo.MemberVo">
+		SELECT * FROM `Employee`;
+	</select>
+	
+	<delete id="deleteMember">
+		DELETE FROM `Employee` WHERE `uid`=#{uid};
+	</delete>
+	
+	<update id="updateMember">
+		UPDATE `Employee` SET
+		`name`=#{name},
+		`hp`=#{hp},
+		`pos`=#{pos},
+		`dep`=#{dep}		
+		WHERE `uid`=#{uid};
+	</update>
+	
+</mapper>

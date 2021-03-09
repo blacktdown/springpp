@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>준우마켓은 무엇을 팔까?</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="top">
+                <div>
+                    <a href="../User/login.html">로그인</a>
+                    <a href="../User/register.html">회원가입</a>
+                    <a href="#">마이페이지</a>
+                    <a href="./cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;장바구니</a>
+                </div>
+            </div>
+            <div class="logo">
+                <div>
+                    <a href="/Ppol/index.html"><img src="../img/linkedin_banner_image_logo.png" alt="로고"/></a>
+                    <form action="#">
+                        <input type="text" name="search"/>
+                        <button><i class="fa fa-search"></i></button>
+                    </form>                
+                </div>
+                
+            </div>
+            <div class="menu">
+                <div>
+                    <ul>
+                        <li><a href="#">사용후기</a></li>
+                        <li><a href="#">개인결제</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main>
+            <aside>
+                <!-- 카테고리 -->
+                <ul class="category">
+                    <li><i class="fa fa-bars" aria-hidden="true"></i>카테고리</li>
+                    <li>
+                        <a href="#"><i class="fas fa-keyboard"></i>키보드</a> 
+                        <ol>
+                            <li><a href="../shop/list.html">기계식(청축)</a></li>
+                            <li><a href="../shop/noname.html">기계식(적축)</a></li>
+                            <li><a href="../shop/noname.html">기계식(갈축)</a></li>
+                            <li><a href="../shop/noname.html">무선 키보드</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-mouse"></i>마우스</a>
+                        <ol>
+                            <li><a href="../shop/noname.html">유선마우스</a></li>
+                            <li><a href="../shop/mouse/mouselist.html">무선마우스</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-headset"></i>헤드셋·이어폰</a>
+                        <ol>
+                            <li><a href="../shop/noname.html">유선 헤드셋</a></li>
+                            <li><a href="../shop/noname.html">무선 헤드셋</a></li>
+                            <li><a href="../shop/noname.html">이어폰</a></li>
+                            <li><a href="../shop/noname.html">마이크</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-wrench"></i>악세사리</a>
+                        <ol>
+                            <li><a href="../shop/noname.html">키보드</a></li>
+                            <li><a href="../shop/noname.html">마우스</a></li>
+                            <li><a href="../shop/noname.html">헤드셋·이어폰</a></li>
+                            <li><a href="../shop/noname.html">마이크</a></li>
+                        </ol>
+                    </li>
+                </ul>
+                <!-- 베스트상품 -->
+                <article class="best" style="position: static; top: 0px;">
+                    <h1><i class="fas fa-crown" area-hidden="true">"베스트상품"</i></h1>
+                    <ol>
+                        <li>
+                            <a href="./mouse/mousemouse.html">
+                                <div class="thumb">
+                                    <i>1</i>
+                                    <img src="../img/mousemouse.jpg" alt="sample">
+                                </div>
+                                <h2>마우스는 쥐가 맞아</h2>
+                                <div class="org_price">
+                                    <del>30,000</del>
+                                    <span>10%</span>
+                                </div>
+                                <div class="dis_price">
+                                    <ins>27,000</ins>
+                                </div>
+                            </a>
+                        </li>
+                    </ol>
+                </article>
+            </aside>
+            <!-- 주문완료 -->
+            <section id="order-complete">
+              
+                <!-- 제목, 페이지 네비게이션 -->
+                <nav>
+                  <h1>주문완료</h1>
+                  <p>
+                    HOME &gt; 장바구니 &gt; 주문결제 &gt; <strong>주문완료</strong>
+                  </p>
+                </nav>
+  
+                <section>            
+                  <div>
+                    <h2>고객님의 주문이 정상적으로 완료되었습니다.<i class="far fa-smile" aria-hidden="true"></i></h2>
+                    <p>
+                      주문완료됬어요 주문완료
+                    </p>
+                  </div>
+              
+                  <section>
+                    <article class="product">
+                      <h1>상품정보</h1>
+                      <table border="0">
+                        <tbody><tr>
+                          <th>상품명</th>
+                          <th>상품금액</th>
+                          <th>할인금액</th>
+                          <th>수량</th>
+                          <th>주문금액</th>
+                        </tr>
+                        <tr>
+                          <td>
+                            <article>
+                              <img src="../img/unnamed.jpg" alt="">
+                              <div>
+                                <h2><a href="#">파란키보드</a></h2>
+                                <p>유선키보드</p>
+                              </div>
+                            </article>
+                          </td>
+                          <td>17,000원</td>
+                          <td>1,000원</td>
+                          <td>1</td>
+                          <td>16,000원</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <article>
+                              <img src="../img/mousemouse.jpg" alt="">
+                              <div>
+                                <h2><a href="#">마우스는 쥐가 맞아</a></h2>
+                                <p>무선마우스</p>
+                              </div>
+                            </article>
+                          </td>
+                          <td>17,000원</td>
+                          <td>1,000원</td>
+                          <td>1</td>
+                          <td>16,000원</td>
+                        </tr>
+                        <tr class="total">
+                          <td colspan="4"></td>
+                          <td>
+                            <table border="0">
+                              <tbody><tr>
+                                <td>총 상품금액</td>
+                                <td><span>34,000</span>원</td>
+                              </tr>
+                              <tr>
+                                <td>총 할인금액</td>
+                                <td><span>-2,000</span>원</td>
+                              </tr>
+                              <tr>
+                                <td>배송비</td>
+                                <td><span>3,000</span>원</td>
+                              </tr>
+                              <tr>
+                                <td>총 결제금액</td>
+                                <td><span>35,000</span>원</td>
+                              </tr>
+                            </tbody></table>                      
+                          </td>
+                        </tr>
+                      </tbody></table>                
+                    </article>
+              
+                    <article class="order">
+                      <h1>주문정보</h1>
+                
+                      <table border="0">
+                        <tbody><tr>
+                          <td>주문번호</td>
+                          <td>2008101324568</td>
+                          <td rowspan="3">총 결제금액</td>
+                          <td rowspan="3"><span>35,000</span>원</td>
+                        </tr>
+                        <tr>
+                          <td>결제방법</td>
+                          <td>신용카드</td>
+                        </tr>
+                        <tr>
+                          <td>주문자/연락처</td>
+                          <td>박준우/010-1234-1234</td>
+                        </tr>
+                      </tbody></table>
+                    </article>
+              
+                    <article class="delivery">
+                      <h1>배송정보</h1>
+                      <table border="0">
+                        <tbody><tr>
+                          <td>수취인</td>
+                          <td>박준우</td>                    
+                          <td>주문자 정보</td>
+                        </tr>
+                        <tr>
+                          <td>연락처</td>
+                          <td>010-1234-1234</td>
+                          <td rowspan="2">
+                            박준우<br>
+                            010-1234-1234
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>배송지 주소</td>
+                          <td>부산광역시 부산진구 어딜까요?</td>
+                        </tr>
+                      </tbody></table>
+                    </article>
+              
+                    <article class="alert">
+                      <h1>꼭 알아두세요.</h1>
+                      <ul>
+                        <li><span>케이마켓은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 케이마켓은 상품, 거래정보 및 거래에 대하여 책임을 지지 않습니다.</span></li>
+                        <li><span>구매주문내역, 배송상태 확인, 구매영수증 출력, 구매취소/반품/교환은 사이트 상단의 주문/배송조회에서 확인 할 수 있습니다.</span></li>
+                        <li><span>고객님의 주문이 체결된 후 상품품절 및 단종 등에 의해 배송이 불가능할 경우, 전자상거래등에서의 소비자 보호에 관한 법률 제15조 2항에 의거하여 3영업일(공휴일 제외) 이내에 자동으로 취소될 수 있으며, 이 경우 취소 안내 메일이 고객님께 발송되오니 양지 바랍니다.</span></li>
+                        <li><span>극히 일부 상품에 대해 수량부족, 카드결제승인 오류등의 사례가 간혹 있을 수 있으니 `나의쇼핑정보`에서 다시 한번 확인해 주세요.</span></li>
+                        <li><span>현금잔고로 구매하셨을 경우, 나의 쇼핑정보에서 입금확인이 되었는지를 다시 한번 확인해 주세요.</span></li>
+                        <li><span>배송주소를 추가하거나 변경, 삭제 등의 관리는 `나의쇼핑정보 &gt; 나의정보` 에서 가능합니다.</span></li>
+                      </ul>
+                    </article>            
+                  </section>
+                </section>
+              </section>
+        </main>
+        <footer>
+            <ul>
+                <li><a href="../introduction/hello.html">회사소개</a></li>
+                <li><a href="#">서비스이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">전자금융거래약관</a></li>
+            </ul>
+            <div>
+                <p><img src="../img/linkedin_banner_image_logo.png" alt="로고"></p>
+                <p>
+                  <strong>(주)준우마켓</strong><br />
+                  부산시 강남구 테헤란로 152 (역삼동 강남파이낸스센터)<br />
+                  대표이사 : 홍길동<br />
+                  사업자등록번호 : 220-81-83676 사업자정보확인<br />
+                  통신판매업신고 : 강남 10630호 Fax : 02-589-8842
+                </p>
+                <p>
+                  <strong>고객센터</strong><br />
+                  Tel : 1234-5678 (평일 09:00~18:00)<br />
+                  스마일클럽/SVIP 전용 : 1522-5700 (365일 09:00~18:00)<br />
+                  경기도 부천시 원미구 부일로 223(상동) 투나빌딩 6층<br />
+                  Fax : 051-123-4567 | Mail : jw@jw.co.kr<br />
+                </p>
+              </div>              
+        </footer>
+    </div>    
+</body>
+</html>

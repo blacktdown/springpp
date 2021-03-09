@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>준우마켓은 무엇을 팔까?</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="/Ppol/css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="top">
+                <div>
+                    <a href="/Ppol/User/login.html">로그인</a>
+                    <a href="/Ppol/User/register.html">회원가입</a>
+                    <a href="#">마이페이지</a>
+                    <a href="../cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;장바구니</a>
+                </div>
+            </div>
+            <div class="logo">
+                <div>
+                    <a href="/Ppol/index.html"><img src="/Ppol/img/linkedin_banner_image_logo.png" alt="로고"/></a>
+                    <form action="#">
+                        <input type="text" name="search"/>
+                        <button><i class="fa fa-search"></i></button>
+                    </form>                
+                </div>
+                
+            </div>
+            <div class="menu">
+                <div>
+                    <ul>
+                        <li><a href="#">사용후기</a></li>
+                        <li><a href="#">개인결제</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main>
+            <aside>
+                <!-- 카테고리 -->
+                <ul class="category">
+                    <li><i class="fa fa-bars" aria-hidden="true"></i>카테고리</li>
+                    <li>
+                        <a href="#"><i class="fas fa-keyboard"></i>키보드</a> 
+                        <ol>
+                            <li><a href="/Ppol/shop/list.html">기계식(청축)</a></li>
+                            <li><a href="/Ppol/shop/noname.html">기계식(적축)</a></li>
+                            <li><a href="/Ppol/shop/noname.html">기계식(갈축)</a></li>
+                            <li><a href="/Ppol/shop/noname.html">무선 키보드</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-mouse"></i>마우스</a>
+                        <ol>
+                            <li><a href="/Ppol/shop/noname.html">유선마우스</a></li>
+                            <li><a href="/Ppol/shop/mouse/mouselist.html">무선마우스</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-headset"></i>헤드셋·이어폰</a>
+                        <ol>
+                            <li><a href="/Ppol/shop/noname.html">유선 헤드셋</a></li>
+                            <li><a href="/Ppol/shop/noname.html">무선 헤드셋</a></li>
+                            <li><a href="/Ppol/shop/noname.html">이어폰</a></li>
+                            <li><a href="/Ppol/shop/noname.html">마이크</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-wrench"></i>악세사리</a>
+                        <ol>
+                            <li><a href="/Ppol/shop/noname.html">키보드</a></li>
+                            <li><a href="/Ppol/shop/noname.html">마우스</a></li>
+                            <li><a href="/Ppol/shop/noname.html">헤드셋·이어폰</a></li>
+                            <li><a href="/Ppol/shop/noname.html">마이크</a></li>
+                        </ol>
+                    </li>
+                </ul>
+
+
+                <!-- 베스트상품 -->
+                <article class="best" style="position: static; top: 0px;">
+                    <h1><i class="fas fa-crown" area-hidden="true">"베스트상품"</i></h1>
+                    <ol>
+                        <li>
+                            <a href="./mousemouse.html">
+                                <div class="thumb">
+                                    <i>1</i>
+                                    <img src="/Ppol/img/mousemouse.jpg" alt="sample">
+                                </div>
+                                <h2>마우스는 쥐가 맞아</h2>
+                                <div class="org_price">
+                                    <del>30,000</del>
+                                    <span>10%</span>
+                                </div>
+                                <div class="dis_price">
+                                    <ins>27,000</ins>
+                                </div>
+                            </a>
+                        </li>
+                    </ol>
+                </article>
+            </aside>
+            <!-- 리스트 -->
+            <section id="list">
+               <nav>
+                   <h1>무선마우스</h1>
+                   <p>HOME > 마우스 > 무선마우스</p>
+                </nav>
+                <ul>
+                    <li><a href="#">판매많은순</a></li>
+                    <li><a href="#">낮은가격순</a></li>
+                    <li><a href="#">높은가격순</a></li>
+                    <li><a href="#">평점높은순</a></li>
+                    <li><a href="#">후기많은순</a></li>
+                    <li><a href="#">최근등록순</a></li>
+                </ul>
+               <section>
+                   <article>
+                    <ul>
+                        <li>
+                            <a href="./mouseviper.html"><img src="/Ppol/img/front_c4449_gz0jr.jpg" alt="sample"></a>
+                        </li>
+                        <li>
+                            <h3>Razer Viper Ultimate</h3>
+                            <p><a href="./mouseviper.html">판매자는 이걸로 행복하게 게임중</a></p>
+                        </li>
+                        <li>
+                         <div class="org_price">
+                             <del>158,000</del>
+                             <span>10%</span>
+                         </div>
+                         <div class="dis_price">
+                             <ins>128,000</ins>
+                         </div>
+                         <div class="free_order">
+                            <span>무료배송</span>
+                         </div>
+                        </li>
+                        <li>
+                            <h4><i class="fas fa-home" aria-hidden="true">Razer</i></h4>
+                            <h5>파워딜러</h5>
+                            <h6 class="rating star1">상품평</h6>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="./mousemouse.html"><img src="/Ppol/img/mousemouse.jpg" alt="sample"></a>
+                        </li>
+                        <li>
+                            <h3>AKKO WAIGUACP Hamster</h3>
+                            <p><a href="./mousemouse.html">마우스는 쥐가 맞아</a></p>
+                        </li>
+                        <li>
+                         <div class="org_price">
+                             <del>30,000</del>
+                             <span>10%</span>
+                         </div>
+                         <div class="dis_price">
+                             <ins>27,000</ins>
+                         </div>
+                         <div class="free_order">
+                            <span>무료배송</span>
+                         </div>
+                        </li>
+                        <li>
+                            <h4><i class="fas fa-home" aria-hidden="true">Razer</i></h4>
+                            <h5>파워딜러</h5>
+                            <h6 class="rating star1">상품평</h6>
+                        </li>
+                    </ul>
+                   </article>
+               </section>
+               <!-- 페이지 네비게이션 -->
+               <div class="paging">
+                <a href="#" class="prev">＜이전</a>
+                <a href="#" class="num current">1</a>
+                <a href="#" class="num">2</a>
+                <a href="#" class="num">3</a>
+                <a href="#" class="num">4</a>
+                <a href="#" class="num">5</a>
+                <a href="#" class="num">6</a>
+                <a href="#" class="num">7</a>
+                <a href="#" class="next">다음></a>
+            </div>
+            </section>
+        </main>
+        <footer>
+            <ul>
+                <li><a href="/Ppol/introduction/hello.html">회사소개</a></li>
+                <li><a href="#">서비스이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">전자금융거래약관</a></li>
+            </ul>
+            <div>
+                <p><img src="/Ppol/img/linkedin_banner_image_logo.png" alt="로고"></p>
+                <p>
+                  <strong>(주)준우마켓</strong><br />
+                  부산시 강남구 테헤란로 152 (역삼동 강남파이낸스센터)<br />
+                  대표이사 : 홍길동<br />
+                  사업자등록번호 : 220-81-83676 사업자정보확인<br />
+                  통신판매업신고 : 강남 10630호 Fax : 02-589-8842
+                </p>
+                <p>
+                  <strong>고객센터</strong><br />
+                  Tel : 1234-5678 (평일 09:00~18:00)<br />
+                  스마일클럽/SVIP 전용 : 1522-5700 (365일 09:00~18:00)<br />
+                  경기도 부천시 원미구 부일로 223(상동) 투나빌딩 6층<br />
+                  Fax : 051-123-4567 | Mail : jw@jw.co.kr<br />
+                </p>
+              </div>              
+        </footer>
+    </div>    
+</body>
+</html>
