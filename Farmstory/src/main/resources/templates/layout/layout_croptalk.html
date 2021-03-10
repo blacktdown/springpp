@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <title>팜스토리</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+    <div id="wrapper">
+        
+        <header th:include="/_header.html::_header"></header>
+
+		<div id="sub">
+		    <div><img src="/img/sub_top_tit3.png" alt="CROPTALK"></div>
+		    <section class="cate3">
+		        <aside>
+		            <img src="/img/sub_aside_cate3_tit.png" alt="농작물이야기"/>
+		
+		            <ul class="lnb">
+		                <li class="on"><a href="/board/list?group=croptalk&cate=story">농작물이야기</a></li>
+		                <li><a href="/board/list?group=croptalk&cate=grow">텃밭가꾸기</a></li>
+		                <li><a href="/board/list?group=croptalk&cate=school">귀농학교</a></li>
+		            </ul>
+		        </aside>
+		        <article>
+        			<div layout:fragment="content"></div>
+        		</article>
+        	</section>
+		</div>                
+        
+        <footer th:include="/_footer.html::_footer"></footer>
+    </div>    
+</body>
+</html>

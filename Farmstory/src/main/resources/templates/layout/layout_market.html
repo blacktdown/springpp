@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <title>팜스토리</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+    <div id="wrapper">
+        
+        <header th:include="/_header.html::_header"></header>
+
+		<div id="sub">
+		    <div><img src="/img/sub_top_tit2.png" alt="MARKET"></div>
+		    <section class="cate2">
+		        <aside>
+		            <img src="/img/sub_aside_cate2_tit.png" alt="장보기"/>
+		
+		            <ul class="lnb">
+		                <li class="on"><a href="/board/list?group=market&cate=market">장보기</a></li>
+		            </ul>
+		        </aside>
+        		<div layout:fragment="content"></div>
+        	</section>
+		</div>                
+        
+        <footer th:include="/_footer.html::_footer"></footer>
+    </div>    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <title>팜스토리</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+    <div id="wrapper">
+        
+        <header th:include="/_header.html::_header"></header>
+
+		<div id="sub">
+		    <div><img src="/img/sub_top_tit4.png" alt="EVENT"></div>
+		    <section class="cate4">
+		        <aside>
+		            <img src="/img/sub_aside_cate4_tit.png" alt="이벤트"/>
+		
+		            <ul class="lnb">
+		                <li class="on"><a href="/board/list?group=event&cate=event">이벤트</a></li>
+		            </ul>
+		        </aside>
+        		<div layout:fragment="content"></div>
+        	</section>
+		</div>                
+        
+        <footer th:include="/_footer.html::_footer"></footer>
+    </div>    
+</body>
+</html>

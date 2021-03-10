@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <title>팜스토리</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+    <div id="wrapper">
+        
+        <header th:include="/_header.html::_header"></header>
+
+		<div id="sub">
+		    <div><img src="/img/sub_top_tit1.png" alt="INTRODUCTION"></div>
+		    <section class="cate1">
+		        <aside>
+		            <img src="/img/sub_aside_cate1_tit.png" alt="팜스토리 소개"/>
+		
+		            <ul class="lnb">
+		                <li class="on"><a href="/introduction/hello">인사말</a></li>
+		                <li><a href="/introduction/direction">찾아오시는 길</a></li>
+		            </ul>
+		        </aside>
+        		<div layout:fragment="content"></div>
+        	</section>
+		</div>                
+        
+        <footer th:include="/_footer.html::_footer"></footer>
+    </div>    
+</body>
+</html>
