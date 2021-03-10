@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
     <script>
         $(function(){
             $('.slider > ul').bxSlider({
@@ -28,16 +28,16 @@
         <header>
             <div class="top">
                 <div>
-                    <a th:if="${session.user == null}" href="/member/login">로그인</a>
-		        	<a th:if="${session.user == null}" href="/member/terms">회원가입</a>
-		        	<a th:if="${session.user != null}" href="/member/logout">로그아웃</a>
+                    <a th:if="${session.suser == null}" href="/member/login">로그인</a>
+		        	<a th:if="${session.suser == null}" href="/member/terms">회원가입</a>
+		        	<a th:if="${session.suser != null}" href="/member/logout">로그아웃</a>
                     <a href="#">마이페이지</a>
                     <a href="/shop/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;장바구니</a>
                 </div>
             </div>
             <div class="logo">
                 <div>
-                    <a href="/"><img src="./img/linkedin_banner_image_logo.png" alt="로고"/></a>
+                    <a href="/"><img src="/img/linkedin_banner_image_logo.png" alt="로고"/></a>
                     <form action="#">
                         <input type="text" name="search"/>
                         <button><i class="fa fa-search"></i></button>

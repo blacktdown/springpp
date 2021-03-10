@@ -37,9 +37,9 @@ public class MemberController {
 		
 		if(user != null) {
 			sess.setAttribute("suser", user);
-			return "redirect:/index";
-		} else {
-			return "redirect:/member/login";
+			return "redirect:/index";			
+		}else {
+			return "redirect:/member/login";			
 		}
 	}
 	
@@ -68,14 +68,5 @@ public class MemberController {
 		return "redirect:/member/login";
 	}
 	
-	@GetMapping("/member/register-seller")
-	public String registerSeller() {
-		return "/member/register-seller";
-	}
-	
-	@GetMapping("/member/signup")
-	public String signup() {
-		return "/member/signup";
-	}
 
 }
