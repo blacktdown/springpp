@@ -9,14 +9,40 @@ public class MemberVo {
 	private String email;
 	private String hp;
 	private int grade;
-	private String zip;
-	private String addr1;
-	private String addr2;
+	private int sample6_postcode;
+	private String sample6_address;
+	private String sample6_detailAddress;
+	private String sample6_extraAddress;
 	private String regip;
+	public int getSample6_postcode() {
+		return sample6_postcode;
+	}
+	public void setSample6_postcode(int sample6_postcode) {
+		this.sample6_postcode = sample6_postcode;
+	}
+	public String getSample6_address() {
+		return sample6_address;
+	}
+	public void setSample6_address(String sample6_address) {
+		this.sample6_address = sample6_address;
+	}
+	public String getSample6_detailAddress() {
+		return sample6_detailAddress;
+	}
+	public void setSample6_detailAddress(String sample6_detailAddress) {
+		this.sample6_detailAddress = sample6_detailAddress;
+	}
+	public String getSample6_extraAddress() {
+		return sample6_extraAddress;
+	}
+	public void setSample6_extraAddress(String sample6_extraAddress) {
+		this.sample6_extraAddress = sample6_extraAddress;
+	}
 	private String rdate;
 	
 	//추가필드(폼)
 	private String pass1;
+	
 	
 	public String getPass1() {
 		return pass1;
@@ -67,24 +93,6 @@ public class MemberVo {
 	}
 	public void setGrade(int grade) {
 		this.grade = grade;
-	}
-	public String getZip() {
-		return zip;
-	}
-	public void setZip(String zip) {
-		this.zip = zip;
-	}
-	public String getAddr1() {
-		return addr1;
-	}
-	public void setAddr1(String addr1) {
-		this.addr1 = addr1;
-	}
-	public String getAddr2() {
-		return addr2;
-	}
-	public void setAddr2(String addr2) {
-		this.addr2 = addr2;
 	}
 	public String getRegip() {
 		return regip;

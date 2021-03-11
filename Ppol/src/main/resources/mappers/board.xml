@@ -3,7 +3,7 @@
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="kr.co.ppol.dao.AdminDao">
+<mapper namespace="kr.co.ppol.dao.BoardDao">
 	
 	<select id="selectLatest" resultType="kr.co.ppol.vo.BoardVo">
 		(SELECT * FROM `JBOARD_ARTICLE` WHERE `cate`='grow' AND `parent`=0 ORDER BY `seq` DESC LIMIT 5)
